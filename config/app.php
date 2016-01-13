@@ -159,6 +159,8 @@ return [
         TrezeVel\Category\Providers\CategoryServiceProvider::class,
         TrezeVel\Tag\Providers\TagServiceProvider::class,
 
+        \Cviebrock\EloquentSluggable\SluggableServiceProvider::class
+
     ],
 
     /*

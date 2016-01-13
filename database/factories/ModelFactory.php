@@ -1,5 +1,7 @@
 <?php
 
+use TrezeVel\Category\Models\Category;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -17,5 +19,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+    ];
+});
+
+
+$factory->define(Category::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'active' => true
     ];
 });
