@@ -3,12 +3,15 @@
 namespace TrezeVel\Category\Testing;
 
 use TrezeVel\Category\Models\Category;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 /**
 * Teste de categorias
 */
 class AdminCategoriesTest extends \TestCase
 {
+    use DatabaseTransactions;
+
     public function testCanVisitAdminCategoriesPage()
     {
         $this->visit('/admin/categories')
@@ -27,5 +30,13 @@ class AdminCategoriesTest extends \TestCase
             ->see('Category 2')
             ->see('Category 3')
             ->see('Category 4');
+    }
+
+    public function testClickCreateNewCategory()
+    {
+        $this->visit('/admin/categories')
+            ->click('Create Category')
+            ->seePageIs('/admin/categories/create')
+            ->see('Create Category');
     }
 }
