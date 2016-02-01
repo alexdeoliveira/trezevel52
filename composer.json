@@ -23,7 +23,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "TrezeVel\\Category\\": "vendor/trezevel/codecategory/src/Category/",
+            "TrezeVel\\Category\\": "vendor/trezevel/Category/src/Category/",
             "TrezeVel\\Tag\\": "vendor/trezevel/tag/src/Tag/"
         }
     },
